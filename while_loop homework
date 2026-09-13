@@ -1,0 +1,40 @@
+#Part 1:
+total_homework = 4
+original_count = total_homework
+print(f"You have {original_count} tasks today to complete!")
+print()
+
+#Part 2:
+completed_task = 0
+task_num = 1
+
+#Part 3:
+while task_num <= total_homework:
+    if task_num == 1: next_task = "Maths Practice"
+    elif task_num == 2: next_task = "Physics Reading"
+    elif task_num == 3: next_task = "Chemistry Worksheet"
+    else:next_task = "Coding Practice"
+    answer = input(f"Have you finished: {next_task}? (yes/no):") 
+
+    #Part 4:
+    if answer == "yes":
+        completed_task += 1
+        task_num += 1
+        print(f"Great Job! You have finished task, {completed_task}")
+    else:
+        print("OK! Finish it and check again.")
+
+    #Part 5:
+    print("Homework tasks remaining:", total_homework - completed_task)
+    print()
+
+#Part 6:
+print("===All Homework Complete===")
+print("Great work finishing your homework today!\n")
+
+#Part 7:
+print("\n===== HOMEWORK COMPLETION SUMMARY =====")
+print("Homework Assigned Today:", original_count)
+print("Homework Completed:", completed_task)
+print("Homework Remaining:", total_homework - completed_task)
+print("=======================================")
